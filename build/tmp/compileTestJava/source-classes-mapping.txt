@@ -1,0 +1,8 @@
+com/amazon/ata/unittesting/subscribeandsave/service/SubscriptionServiceTest.java
+ com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest
+com/amazon/ata/unittesting/subscribeandsave/dao/SubscriptionFileStorageTest.java
+ com.amazon.ata.unittesting.subscribeandsave.dao.SubscriptionFileStorageTest
+com/amazon/ata/unittesting/subscribeandsave/test/util/SubscriptionRestorer.java
+ com.amazon.ata.unittesting.subscribeandsave.test.util.SubscriptionRestorer
+com/amazon/ata/unittesting/subscribeandsave/dao/SubscriptionDAOTest.java
+ com.amazon.ata.unittesting.subscribeandsave.dao.SubscriptionDAOTest

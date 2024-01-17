@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.stock.StockTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-05-24T18:11:17" hostname="Johns-MacBook-Pro.local" time="0.024">
+  <properties/>
+  <testcase name="hashCode_differentId_differentHashCode()" classname="com.amazon.stock.StockTest" time="0.016"/>
+  <testcase name="hashCode_sameIdDifferentName_sameHashCode()" classname="com.amazon.stock.StockTest" time="0.002"/>
+  <testcase name="equals_differentClass_returnsFalse()" classname="com.amazon.stock.StockTest" time="0.001"/>
+  <testcase name="equals_differentNames_returnsTrue()" classname="com.amazon.stock.StockTest" time="0.001"/>
+  <testcase name="hashCode_sameIdAndName_sameHashCode()" classname="com.amazon.stock.StockTest" time="0.001"/>
+  <testcase name="equals_differentIds_returnsFalse()" classname="com.amazon.stock.StockTest" time="0.001"/>
+  <testcase name="equals_sameObject_returnsTrue()" classname="com.amazon.stock.StockTest" time="0.0"/>
+  <testcase name="equals_sameIdAndName_returnsTrue()" classname="com.amazon.stock.StockTest" time="0.0"/>
+  <testcase name="equals_nullObject_returnsFalse()" classname="com.amazon.stock.StockTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-05-24T18:11:17" hostname="Johns-MacBook-Pro.local" time="0.17">
+  <properties/>
+  <testcase name="getProductByAsin_asinEmpty_exceptionRaised()" classname="com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductServiceTest" time="0.161"/>
+  <testcase name="getProductByAsin_asinRecognized_productReturned()" classname="com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductServiceTest" time="0.002"/>
+  <testcase name="getProductByAsin_asinUnrecognized_nullReturned()" classname="com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductServiceTest" time="0.002"/>
+  <testcase name="getProductByAsin_asinNull_exceptionRaised()" classname="com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductServiceTest" time="0.002"/>
+  <testcase name="getProductByAsin_asinWhitespace_exceptionRaised()" classname="com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

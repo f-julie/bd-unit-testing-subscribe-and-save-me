@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-07-10T21:56:51" hostname="WADDLES" time="1.033">
+  <properties/>
+  <testcase name="subscribe_unknownCustomer_exceptionOccurs()" classname="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" time="0.866"/>
+  <testcase name="subscribe_withExistingUnsubscribableProduct_throwsException()" classname="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" time="0.022"/>
+  <testcase name="subscribe_newSubscription_subscriptionReturned()" classname="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" time="0.032"/>
+  <testcase name="getSubscription_unknownSubscription_returnsNull()" classname="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" time="0.016"/>
+  <testcase name="subscribe_withUnknownAsin_throwsMeaningfulException()" classname="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" time="0.015"/>
+  <testcase name="getSubscription_existingSubscription_subscriptionReturned()" classname="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" time="0.047"/>
+  <testcase name="subscribe_withExistingSubscribedCustomerAsinPair_throwsException()" classname="com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionServiceTest" time="0.028"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

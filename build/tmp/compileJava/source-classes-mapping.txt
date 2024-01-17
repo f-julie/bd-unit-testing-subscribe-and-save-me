@@ -1,0 +1,19 @@
+com/amazon/ata/unittesting/subscribeandsave/dao/SubscriptionFileStorage.java
+ com.amazon.ata.unittesting.subscribeandsave.dao.SubscriptionFileStorage
+com/amazon/ata/unittesting/subscribeandsave/service/SubscriptionService.java
+ com.amazon.ata.unittesting.subscribeandsave.service.SubscriptionService
+com/amazon/ata/resources/debugging/classroom/dependencies/Product.java
+ com.amazon.ata.resources.debugging.classroom.dependencies.Product
+com/amazon/ata/unittesting/subscribeandsave/App.java
+ com.amazon.ata.unittesting.subscribeandsave.App
+com/amazon/ata/resources/debugging/classroom/dependencies/AmazonIdentityService.java
+ com.amazon.ata.resources.debugging.classroom.dependencies.AmazonIdentityService
+com/amazon/ata/unittesting/subscribeandsave/types/Subscription.java
+ com.amazon.ata.unittesting.subscribeandsave.types.Subscription
+ com.amazon.ata.unittesting.subscribeandsave.types.Subscription$Builder
+com/amazon/ata/resources/debugging/classroom/dependencies/AmazonProductService.java
+ com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductService
+com/amazon/ata/unittesting/subscribeandsave/dao/StorageException.java
+ com.amazon.ata.unittesting.subscribeandsave.dao.StorageException
+com/amazon/ata/unittesting/subscribeandsave/dao/SubscriptionDAO.java
+ com.amazon.ata.unittesting.subscribeandsave.dao.SubscriptionDAO

@@ -1,0 +1,6 @@
+com/amazon/ata/resources/debugging/classroom/dependencies/AmazonProductServiceTest.java
+ com.amazon.ata.resources.debugging.classroom.dependencies.AmazonProductServiceTest
+com/amazon/stock/StockTest.java
+ com.amazon.stock.StockTest
+com/amazon/ata/resources/debugging/classroom/dependencies/AmazonIdentityServiceTest.java
+ com.amazon.ata.resources.debugging.classroom.dependencies.AmazonIdentityServiceTest

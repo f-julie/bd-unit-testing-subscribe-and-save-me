@@ -1,0 +1,53 @@
+@startuml
+title [[https://tiny.amazon.com/5y9djn0o/SNSRevisited Subscribe & Save Revisited: Unit testing updateSubscription]]
+class App #lightgrey {
+    + {static} getAmazonProductService() : AmazonProductService
+    + {static} getAmazonIdentityService() : AmazonIdentityService
+    + {static} getSubscriptionDAO() : SubscriptionDAO
+    + {static} getSubscriptionFileStorage() : SubscriptionFileStorage
+    + {static} getSubscriptionService() : SubscriptionService
+}
+
+class Subscription {
+    -String id
+    -String customerId
+    -String asin
+    -int frequency
+    +getId() : String
+    +setId(id : String) : void
+    +getCustomerId() : String
+    +getAsin() : String
+    +getFrequency() : int
+    +toString() : String
+}
+
+class SubscriptionService {
+    +subscribe(customerId : String, asin : String, frequency : int) : Subscription
+    +getSubscription(subscriptionId : String) : Subscription
+}
+
+class SubscriptionDAO {
+    +createSubscription(customerId : String, asin : String, frequency : int) : Subscription
+    +getSubscription(subscriptionId : String) : Subscription
+}
+
+class SubscriptionFileStorage {
+    +getSubscriptionById(subscriptionId : String) : Subscription
+    +createSubscription(subscription : Subscription) : Subscription
+    +updateSubscription(subscription : Subscription) : Subscription
+}
+
+class AmazonProductService #lightgrey{
+    +getProductByAsin(asin : String) : Product
+}
+
+class AmazonIdentityService #lightgrey{
+    +validateCustomer(customerId : String) : boolean
+}
+
+'Relationships
+SubscriptionService *-- SubscriptionDAO
+SubscriptionDAO *-- SubscriptionFileStorage
+SubscriptionService -- AmazonProductService
+SubscriptionService -- AmazonIdentityService
+@enduml
