@@ -12,12 +12,15 @@ import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SubscriptionFileStorageTest {
 
     private static final String TEST_FILE_PATH = "resources/unittesting/classroom/subscribeandsave/subscriptions.csv";
     private static final String ASIN = "B01BMDAVIY";
+    private static final String ASIN_2 = "B0006IEJB";
     private static final String CUSTOMER_ID = "amzn1.account.AEZI3A063427738YROOFT8WCXKDE";
+    private static final String CUSTOMER_ID_2 = "amzn1.account.AEZI3A06339413S37ZHKJQUEGLC4";
 
     private SubscriptionFileStorage subscriptionFileStorage;
 
@@ -130,7 +133,63 @@ public class SubscriptionFileStorageTest {
 
 
     // PARTICIPANTS: Remove this line and add your updateSubscription() tests here.
+    @Test
+    public void updateSubscription_withExistingSubscriptionAndUpdatedCustomerId_returnsUpdatedCustomerId() {
+        // GIVEN - An existing subscription with valid customer id, updated to new customer
+        //int newFrequency = 2;
+        Subscription updatedSubscription = Subscription.builder()
+                .withSubscriptionId("1fe240f4-3296-4827-8c0e-7fa571b6f49f")
+                .withCustomerId(CUSTOMER_ID)
+                .withAsin("B01BMDAVIY")
+                .withFrequency(1)
+                .build();
 
+        // WHEN - Update the subscription
+        Subscription result = subscriptionFileStorage.updateSubscription(updatedSubscription);
+
+        // THEN - returned subscription customer id matches new value
+        assertEquals(CUSTOMER_ID, result.getCustomerId());
+    }
+
+    @Test
+    public void updateSubscription_withExistingSubscriptionAndUpdatedASIN_returnsUpdatedASIN() {
+        // GIVEN - An existing subscription with valid ASIN, updated to new ASIN
+        //int newFrequency = 2;
+        Subscription updatedSubscription = Subscription.builder()
+                .withSubscriptionId("1fe240f4-3296-4827-8c0e-7fa571b6f49f")
+                .withCustomerId("amzn1.account.AEZI3A09486461G3DRR0VQPQHQ9I")
+                .withAsin(ASIN_2)
+                .withFrequency(1)
+                .build();
+
+        // WHEN - Update the subscription
+        Subscription result = subscriptionFileStorage.updateSubscription(updatedSubscription);
+
+        // THEN - returned subscription ASIN matches new value
+        assertEquals(ASIN_2, result.getAsin());
+    }
+
+    @Test
+    public void updateSubscription_withNullSubscription_throwsIllegalArgumentException() {
+        // GIVEN
+        Subscription nullSubscription = null;
+
+        // WHEN - Attempt to update the subscription
+        // THEN - Exception is thrown
+        assertThrows(IllegalArgumentException.class,
+                () -> subscriptionFileStorage.updateSubscription(nullSubscription),
+                "updating null subscription should result in IllegalArgumentException to be thrown");
+    }
+
+    @Test
+    public void updateSubscription_withSubscriptionMissingId_throwsIllegalArgumentException() {
+
+    }
+
+    @Test
+    public void updateSubscription_withNoSubscriptionFound_throwsIllegalArgumentException() {
+
+    }
 
     @BeforeEach
     @AfterEach
